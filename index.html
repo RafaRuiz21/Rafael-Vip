@@ -53,23 +53,22 @@
             color: #ADD8E6;
             margin-bottom: 20px;
         }
-        .whatsapp-button {
+        #contactButton {
             display: inline-block;
-            background-color: #25D366;
+            background-color: #007BFF;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 16px;
-            margin-bottom: 15px;
+            margin-top: 15px;
         }
-        .whatsapp-button:hover {
-            background-color: #20b65a;
+        #contactButton:hover {
+            background-color: #0056b3;
         }
         .whatsapp-image {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
+            width: 500px;
+            height: 500px;
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
             margin-top: 20px;
@@ -80,28 +79,26 @@
     <div class="container">
         <h1>Bienvenido a RED FORTUNA</h1>
         <p>Escribe a nuestro WhatsApp y solicita tu usuario</p>
-        <!-- Botón de contacto en WhatsApp -->
-        <a href="https://wa.me/3854864386" target="_blank" class="whatsapp-button">WhatsApp</a>
+        
+        <!-- Botón Contactar -->
+        <button id="contactButton">Contactar</button>
     </div>
 
-    <!-- Imagen debajo del rectángulo -->
+    <!-- Imagen promocional con redirección a WhatsApp -->
     <a href="https://wa.me/3854864386" target="_blank">
-        <img src="promo.png" alt="Imagen de contacto en WhatsApp" class="whatsapp-image">
+        <img src="promo.png" alt="Imagen promocional para WhatsApp" class="whatsapp-image">
     </a>
 
-    <!-- Script de seguimiento de clic en WhatsApp -->
+    <!-- Script de seguimiento de clic y redirección a WhatsApp -->
     <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            var whatsappButton = document.querySelector('.whatsapp-button');
-
-            if (whatsappButton) {
-                whatsappButton.addEventListener('click', function() {
-                    fbq('track', 'whatsapp_click', {
-                        'event_category': 'interacción',
-                        'event_label': 'Botón de WhatsApp'
-                    });
-                });
-            }
+        document.getElementById('contactButton').addEventListener('click', function() {
+            // Seguimiento de clic
+            fbq('track', 'contact_click', {
+                'event_category': 'interacción',
+                'event_label': 'Botón de Contacto'
+            });
+            // Redirige a WhatsApp
+            window.open('https://wa.me/3854864386', '_blank');
         });
     </script>
 </body>
