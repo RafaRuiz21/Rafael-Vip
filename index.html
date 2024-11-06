@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Fortuna Rafael</title>
+
     <!-- Meta Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1492665668065348');
         fbq('track', 'PageView');
     </script>
     <noscript>
         <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1492665668065348&ev=PageView&noscript=1"/>
+             src="https://www.facebook.com/tr?id=1492665668065348&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Meta Pixel Code -->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Fortuna Rafael</title>
-    
     <style>
         /* Fondo con degradado y difuminado */
         body {
@@ -39,10 +47,9 @@
             flex-direction: column;
         }
 
-        /* Contenedor principal con sombra y fondo menos oscuro */
         .container {
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo menos oscuro */
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 30px;
             border-radius: 12px;
             max-width: 90%;
@@ -50,7 +57,6 @@
             margin-bottom: 20px;
         }
 
-        /* Título con estilo dorado y elegante */
         h1 {
             color: #FFD700;
             font-size: 2.5em;
@@ -58,14 +64,12 @@
             font-weight: bold;
         }
 
-        /* Texto con color suave */
         p {
             color: #ADD8E6;
             font-size: 1.2em;
             margin-bottom: 25px;
         }
 
-        /* Botón de contacto estilizado */
         #contactButton {
             display: inline-block;
             background-color: #007BFF;
@@ -80,16 +84,14 @@
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
         }
 
-        /* Efecto del botón al pasar el cursor */
         #contactButton:hover {
             background-color: #0056b3;
             transform: scale(1.1);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
         }
 
-        /* Imagen de WhatsApp */
         .whatsapp-image {
-            width: 100%; /* Tamaño completo en pantallas grandes */
+            width: 100%;
             max-width: 450px;
             height: auto;
             border-radius: 10px;
@@ -98,13 +100,11 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Animación en la imagen al pasar el cursor */
         .whatsapp-image:hover {
             transform: scale(1.05);
             box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.7);
         }
 
-        /* Estilos específicos para pantallas pequeñas (móviles) */
         @media (max-width: 600px) {
             .whatsapp-image {
                 width: 300px;
@@ -114,31 +114,18 @@
     </style>
 </head>
 <body>
-    <!-- Contenedor de texto y botón -->
     <div class="container">
-        <h1>Bienvenido a RED FORTUNA</h1>
-        <p>Escribe a nuestro WhatsApp y solicita tu usuario</p>
+        <h1>RED FORTUNA</h1>
+        <p>El siguiente botón te enviara al whatsapp de RAFAEL, nuestro cajero verificado</p>
         
         <!-- Botón Contactar -->
-        <button id="contactButton">Contactar</button>
+        <a href="https://wa.me/3854864386" id="contactButton" target="_blank" role="button">Contactar</a>
     </div>
 
     <!-- Imagen promocional debajo del contenedor de texto -->
     <a href="https://wa.me/3854864386" target="_blank">
         <img src="promo.png" alt="Imagen promocional para WhatsApp" class="whatsapp-image">
     </a>
-
-    <!-- Script de seguimiento de clic y redirección a WhatsApp -->
-    <script type="text/javascript">
-        document.getElementById('contactButton').addEventListener('click', function() {
-            // Seguimiento de clic
-            fbq('track', 'contact_click', {
-                'event_category': 'interacción',
-                'event_label': 'Botón de Contacto'
-            });
-            // Redirige a WhatsApp
-            window.open('https://wa.me/3854864386', '_blank');
-        });
-    </script>
 </body>
 </html>
+
