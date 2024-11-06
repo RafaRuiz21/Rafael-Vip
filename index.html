@@ -73,7 +73,28 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
             margin-top: 20px;
         }
-    </style>
+<style>
+    /* Estilos básicos del botón */
+    #contactButton {
+        display: inline-block;
+        background-color: #007BFF;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 18px;
+        margin-top: 15px;
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, box-shadow 0.4s ease;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra inicial */
+    }
+
+    /* Animación al pasar el cursor */
+    #contactButton:hover {
+        background-color: #0056b3;               /* Cambia el color de fondo */
+        transform: scale(1.15);                  /* Aumenta el tamaño */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5); /* Aumenta la sombra */
+    }
+</style>
 </head>
 <body>
     <div class="container">
